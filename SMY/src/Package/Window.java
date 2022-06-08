@@ -23,6 +23,7 @@ public class Window extends JFrame {
     private JTextArea textAreaProductName;
     private JLabel labelTittlePrice;
     private JLabel LabelNameTittle;
+    private JButton buttonClear;
     public String ClientName;
     private double pinkDonutPrice = 3.50;
     private double duffBeerPrice = 10.00;
@@ -88,6 +89,19 @@ public class Window extends JFrame {
                         "\nClient: "+ ClientName+
                         "\nTotal: $"+ clientTotal);
 
+
+            }
+        });
+
+        //Button clear action
+        buttonClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clientNameLabel.setText("");
+                textAreaProductPrice.setText("");
+                textAreaProductName.setText("");
+                totalLabel.setText("");
+                clientTotal = 0.0;
 
             }
         });
